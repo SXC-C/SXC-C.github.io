@@ -12,3 +12,7 @@ h2{
 padding: 160px;
 font-size: 100em;
 }
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

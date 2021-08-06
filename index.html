@@ -10,6 +10,7 @@
     <link rel = 'stylesheet', href = "style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
 
     <title>yes</title>
 </head>
@@ -41,9 +42,10 @@
             <h2>Welcome portfolio.</h2>
             <p class="lead">Customize this website to your liking.</p>
         </div>-->
+       
     <div class="grid">
         <div class="component_button">
-            <button type="button" class="btn btn-outline-secondary"><img id="bannerimg" src="https://www.freeiconspng.com/uploads/microprocessor-icon-1.png"width=150px height=150px><br>CPU</button>
+            <button onclick="changeText()" type="button" class="btn btn-outline-secondary"><img id="bannerimg" src="https://www.freeiconspng.com/uploads/microprocessor-icon-1.png"width=150px height=150px><br>CPU</button>
         </div>
         <div class="component_button">
             <button type="button" class="btn btn-outline-secondary"><img id="bannerimg" src="https://static.thenounproject.com/png/86218-200.png"width=150px height=150px><br>MotherBoard</button>
@@ -72,12 +74,12 @@
     </div>
         <!-- PROJECTS -->
         <div class="section" id="projects-section">
-            <h4 class="text-center">Projects</h4>
+            <h4 class="text-center" id="title">Projects</h4>
         </div>
 
         <!-- CONTACT -->
         <div class="section" id="contact-section">
-            <h4 class="text-center">Contact</h4>
+            <h4 class="text-center"></h4>Contact</h4>
         </div>
 
     </div>

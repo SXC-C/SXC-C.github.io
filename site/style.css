@@ -20,3 +20,18 @@ font-size: 100em;
     gap: 10%;
     margin: auto;
 }
+
+.image{
+    display:inline-block;
+
+}
+
+.title{
+    display:inline-block;
+
+}
+
+.price{
+    display:inline-block;
+
+}

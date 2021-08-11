@@ -12,6 +12,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="script.js"></script> 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    	function getResult() {  
+        $.ajax({
+          url: "/getitem",
+          success: function(result) {
+            console.log("received result: " + result);
+            $("#result").text(result);
+          }
+        });
+      }
+    </script>
+
+
     <title>yes</title>
 </head>
 <body class="d-flex flex-column h-100">
@@ -24,6 +38,10 @@
             <h2>CP</h2>
             </div>
          </div>
+
+         <button onclick="getResult()">Get My Items</button>
+         <div id="result"></div>
+
        <!-- <label for="exampleDataList" class="form-label">Choose the computer part you want to look for</label>
         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
         <datalist id="datalistOptions">

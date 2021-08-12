@@ -19,6 +19,9 @@
           success: function(result) {
             console.log("received result: " + result);
             $("#result").text(result);
+            $.each(JSON.parse(result), function(index, item){ 
+                
+            }
           }
         });
       }
@@ -26,7 +29,7 @@
 
     <title>yes</title>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" onload="getResult()">
     <div class="container" id="main-content">
         <!-- HEADER -->
 
@@ -37,7 +40,6 @@
             </div>
          </div>
 
-        <button onclick="getResult()">Get My Items</button>
         <div class="products">
             <div class="product_inf">
                 <div class="image"> 

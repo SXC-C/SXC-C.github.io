@@ -20,7 +20,7 @@
             console.log("received result: " + result);
             $("#result").text(result);
             $.each(JSON.parse(result), function(index, item){ 
-                
+                $("#title"+index).text(item.name);
             }
           }
         });
@@ -46,7 +46,31 @@
 
                     <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
                 </div>
-                <div class="title" id="result">
+                <div class="title" id="title0">
+                    
+                </div>
+                <div class="price">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title1">
+                    
+                </div>
+                <div class="price">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title2">
                     
                 </div>
                 <div class="price">

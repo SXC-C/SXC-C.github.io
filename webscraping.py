@@ -39,10 +39,12 @@ def get_item():
     soup = BeautifulSoup(source,'lxml')
     name = soup.findAll('div',class_="item-title")
     price = soup.findAll('li',class_="price-current")
+    img = soup.findAll('div',class_="item-img")
     i=0
     for product in list_product:
         product['name']=name[i].text
         product['price']=price[i].text
+        product['image']=(img[i].find('img')).attrs['src']
         i+=1
     return json.dumps(list_product)
     

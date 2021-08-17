@@ -21,6 +21,8 @@
             $("#result").text(result);
             $.each(JSON.parse(result), function(index, item){ 
                 $("#title"+index).text(item.name);
+                $("#price"+index).text(item.price);
+                $("#image"+index).attr('src',item.image);
             });
           }
         });
@@ -42,38 +44,38 @@
 
         <div class="products">
             <div class="product_inf">
-                <div class="image"> 
+                <div class="image" > 
 
-                    <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                    <img id="image0" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
                 </div>
                 <div class="title" id="title0">
                     
                 </div>
-                <div class="price">
+                <div class="price" id="price0">
                     300
                 </div>
             </div>
             <div class="product_inf">
                 <div class="image"> 
 
-                    <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                    <img id="image1" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
                 </div>
                 <div class="title" id="title1">
                     
                 </div>
-                <div class="price">
+                <div class="price" id="price1">
                     300
                 </div>
             </div>
             <div class="product_inf">
                 <div class="image"> 
 
-                    <img src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                    <img id="image2" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
                 </div>
                 <div class="title" id="title2">
                     
                 </div>
-                <div class="price">
+                <div class="price" id="price2">
                     300
                 </div>
             </div>

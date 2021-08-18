@@ -43,7 +43,7 @@ def get_item():
     i=0
     for product in list_product:
         product['name']=name[i].text
-        product['price']=price[i].text
+        product['price']=price[i].text[0,len(price[i].text)]
         product['image']=(img[i].find('img')).attrs['src']
         i+=1
     return json.dumps(list_product)

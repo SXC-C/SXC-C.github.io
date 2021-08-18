@@ -32,8 +32,75 @@ def get_item():
           'price' : 1230,
           'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
 
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
       }
-  ]
+      
+    ]
     site_dir=path.join(path.dirname(__file__), 'HTMLFIles')
     source=open((path.join(site_dir,"CPUSearch.HTML")),'r')
     soup = BeautifulSoup(source,'lxml')
@@ -42,8 +109,8 @@ def get_item():
     img = soup.findAll('div',class_="item-img")
     i=0
     for product in list_product:
-        product['name']=name[i].text
-        product['price']=price[i].text[0,len(price[i].text)]
+        product['name']=name[i].text[0:name[i].text.find("(")]
+        product['price']=price[i].text[0:len(price[i].text)-4]
         product['image']=(img[i].find('img')).attrs['src']
         i+=1
     return json.dumps(list_product)

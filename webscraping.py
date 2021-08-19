@@ -12,7 +12,7 @@ app = Flask(__name__,
 def root():
    return app.send_static_file('index.html')
 
-@app.route("/getitem")
+@app.route("/getcpu")
 def get_item():
     list_product = [
       {
@@ -114,5 +114,108 @@ def get_item():
         product['image']=(img[i].find('img')).attrs['src']
         i+=1
     return json.dumps(list_product)
-    
+
+@app.route("/getmotherboard")
+def get_MB():
+    list_product = [
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      },
+      {
+          'name' : 'Ryzen CPU',
+          'price' : 1230,
+          'image' : 'https://finance.yahoo.com/quote/GOOG?p=GOOG',
+
+      }
+      
+    ]
+    site_dir=path.join(path.dirname(__file__), 'HTMLFIles')
+    source=open((path.join(site_dir,"amd-md _ Newegg.html")),'r')
+    soup = BeautifulSoup(source,'lxml')
+    name = soup.findAll('div',class_="item-title")
+    price = soup.findAll('li',class_="price-current")
+    img = soup.findAll('div',class_="item-img")
+    i=0
+    for product in list_product:
+        product['name']=name[i].text[0:name[i].text.find("(")]
+        product['price']=price[i].text[0:len(price[i].text)-4]
+        product['image']=(img[i].find('img')).attrs['src']
+        i+=1
+    return json.dumps(list_product)    
 app.run(host='0.0.0.0')
+

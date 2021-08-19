@@ -15,7 +15,7 @@
     <script>
     	function getResult() {  
         $.ajax({
-          url: "/getitem",
+          url: "/getmotherboard",
           success: function(result) {
             console.log("received result: " + result);
             $("#result").text(result);

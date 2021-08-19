@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel = 'stylesheet', href = "style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    	function getResult() {  
+        $.ajax({
+          url: "/getcpu",
+          success: function(result) {
+            console.log("received result: " + result);
+            $("#result").text(result);
+            $.each(JSON.parse(result), function(index, item){ 
+                $("#title"+index).text(item.name);
+
+                $("#price"+index).text(item.price);
+                $("#image"+index).attr('src',item.image);
+
+            });
+          }
+        });
+      }
+    </script>
+
+    <title>yes</title>
+</head>
+<body class="d-flex flex-column h-100" onload="getResult()">
+    <div class="container" id="main-content">
+        <!-- HEADER -->
+
+
+        <div class="banner">
+            <div class="center">
+            <h2>CP</h2>
+            </div>
+         </div>
+
+        <div class="products">
+            <div class="product_inf">
+                <div class="image" > 
+
+                    <img id="image0" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title0">
+                    
+                </div>
+                <div class="price" id="price0">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image1" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title1">
+                    
+                </div>
+                <div class="price" id="price1">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image2" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title2">
+                    
+                </div>
+                <div class="price" id="price2">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image3" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title3">
+                    
+                </div>
+                <div class="price" id="price3">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image4" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title4">
+                    
+                </div>
+                <div class="price" id="price4">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image5" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title5">
+                    
+                </div>
+                <div class="price" id="price5">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image6" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title6">
+                    
+                </div>
+                <div class="price" id="price6">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image7" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title7">
+                    
+                </div>
+                <div class="price" id="price7">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image8" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title8">
+                    
+                </div>
+                <div class="price" id="price8">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image9" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title9">
+                    
+                </div>
+                <div class="price" id="price9">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image10" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title10">
+                    
+                </div>
+                <div class="price" id="price10">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image11" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title11">
+                    
+                </div>
+                <div class="price" id="price11">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image12" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title12">
+                    
+                </div>
+                <div class="price" id="price12">
+                    300
+                </div>
+            </div>
+            <div class="product_inf">
+                <div class="image"> 
+
+                    <img id="image13" src="https://c1.neweggimages.com/ProductImageCompressAll125/19-113-666-V01.jpg">
+                </div>
+                <div class="title" id="title13">
+                    
+                </div>
+                <div class="price" id="price13">
+                    300
+                </div>
+            </div>
+        </div>
+
+       
+
+      
+
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Created by </span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

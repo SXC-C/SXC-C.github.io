@@ -205,7 +205,7 @@ def get_MB():
       
     ]
     site_dir=path.join(path.dirname(__file__), 'HTMLFIles')
-    source=open((path.join(site_dir,"amd-md _ Newegg.html")),'r')
+    source=open((path.join(site_dir,"MotherboardSearchAMD.html")),'r')
     soup = BeautifulSoup(source,'lxml')
     name = soup.findAll('div',class_="item-title")
     price = soup.findAll('li',class_="price-current")

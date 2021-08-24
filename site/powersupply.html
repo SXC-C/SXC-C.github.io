@@ -19,7 +19,7 @@
     <script>
     	function getResult() {  
         $.ajax({
-          url: "/getcpu",
+          url: "/getpowersupply",
           success: function(result) {
             console.log("received result: " + result);
             $("#result").text(result);
@@ -79,7 +79,7 @@
     
             <div class="banner">
                 <div class="center">
-                <h2>CPU</h2>
+                <h2>Power Supply</h2>
                 </div>
              </div>
     

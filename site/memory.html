@@ -19,7 +19,7 @@
     <script>
     	function getResult() {  
         $.ajax({
-          url: "/getcpu",
+          url: "/getmemory",
           success: function(result) {
             console.log("received result: " + result);
             $("#result").text(result);
@@ -79,11 +79,11 @@
     
             <div class="banner">
                 <div class="center">
-                <h2>CPU</h2>
+                <h2>Memory</h2>
                 </div>
              </div>
     
-             <div class="products">
+            <div class="products">
                 <div class="product_inf">
                     <div class="image" > 
     

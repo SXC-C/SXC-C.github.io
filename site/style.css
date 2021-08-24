@@ -52,6 +52,7 @@ h2{
 .center{
 padding: 160px;
 font-size: 100em;
+
 }
 .grid{
     padding: 10%, 10%, 10%, 10%;
@@ -92,4 +93,8 @@ p{
 {
 padding: 1%;
 
+}
+.products
+{
+    padding: 5%;
 }

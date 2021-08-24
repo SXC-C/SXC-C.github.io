@@ -19,7 +19,7 @@ font-size: 100em;
     grid-template-columns: repeat(3,1fr);
     gap: 10%;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 20%;
 }
 
 .image{

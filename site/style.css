@@ -60,6 +60,7 @@ font-size: 100em;
     grid-template-columns: repeat(3,1fr);
     gap: 10%;
     margin: auto;
+    margin-bottom: 20%;
 }
 
 .image{
@@ -76,6 +77,17 @@ font-size: 100em;
     display:inline-block;
 
 }
+
+p{
+    font-size: 1rem;
+}
+
+.intro{
+    padding:4%;
+    padding-left:10%;
+    padding-top:8%;
+}
+
 .product_inf
 {
 padding: 1%;
